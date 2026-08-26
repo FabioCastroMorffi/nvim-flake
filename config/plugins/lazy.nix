@@ -1,3 +1,4 @@
+{pkgs, ...}:
 {
   plugins = {
 
@@ -242,4 +243,13 @@
       end,
     })
   '';
+
+extraPackages = with pkgs; [
+  nixfmt
+  stylua
+  rustfmt
+  black
+  prettier
+  clang-tools
+];
 }

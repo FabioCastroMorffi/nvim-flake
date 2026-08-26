@@ -31,6 +31,10 @@
         vim
         vimdoc
       ];
+      settings = {
+        highlight.enable = true; # explicit, though likely already the default
+        indent.enable = true; # this replaces your manual indentexpr-setting FileType block
+      };
     };
   };
 }

@@ -122,7 +122,16 @@
           end
         '';
         default_format_opts.lsp_format = "fallback";
-        formatters_by_ft.nix = [ "nixfmt" ];
+        formatters_by_ft = {
+          nix = [ "nixfmt" ];
+          lua = [ "stylua" ];
+          rust = [ "rustfmt" ];
+          python = [ "black" ];
+          html = [ "prettier" ];
+          markdown = [ "prettier" ];
+          c = [ "clang_format" ];
+          cpp = [ "clang_format" ];
+        };
       };
     };
 
@@ -151,7 +160,7 @@
       key = "<leader>f";
       action.__raw = ''
         function()
-          require("conform-nvim").format({ async = true })
+          require("conform").format({ async = true })
         end
       '';
       options.desc = "[F]ormat buffer";

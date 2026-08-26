@@ -1,3 +1,4 @@
+{pkgs, ...}:
 {
   plugins = {
     lsp = {
@@ -8,6 +9,14 @@
         };
         clangd = {
           enable = true;
+          extraOptions = {
+            cmd = [
+              "clangd"
+              "--background-index"
+              "--clang-tidy"
+              "--header-insertion=iwyu"
+            ];
+          };
         };
         pyright = {
           enable = true;
@@ -37,4 +46,8 @@
       };
     };
   };
+
+  extraPackages = with pkgs; [
+    clang-tools
+  ];
 }

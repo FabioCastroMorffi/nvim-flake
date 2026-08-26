@@ -2,6 +2,7 @@
 
 ## Structure
 
+```
 ├── config
 │   ├── default.nix      
 │   ├── diagnostics.nix             # diag related options
@@ -14,6 +15,7 @@
 ├── flake.lock
 ├── flake.nix
 └── README.md
+```
 
 ## Test this config (all you need is nix)
 

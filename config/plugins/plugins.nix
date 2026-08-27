@@ -158,9 +158,9 @@
   };
 
   colorschemes = {
-
     tokyonight = {
       enable = true;
+      settings.style = "moon";
       settings.styles.comments.italic = false;
     };
   };

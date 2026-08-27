@@ -7,7 +7,7 @@
         owner = "tamton-aquib";
         repo = "duck.nvim";
         rev = "main";
-        hash = "sha256-97QSkZHpHLq1XyLNhPz88i9VuWy6ux7ZFNJx/g44K2A=";
+        hash = "sha256-NyXu2KmRxQgxXjRYm4vZAe+ZCYwETl/UznQphWjVqRk=";
       };
     })
      pkgs.vimPlugins.cellular-automaton-nvim

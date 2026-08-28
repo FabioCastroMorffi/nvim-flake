@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 {
   extraPlugins = [
     (pkgs.vimUtils.buildVimPlugin {
@@ -10,7 +10,8 @@
         hash = "sha256-97QSkZHpHLq1XyLNhPz88i9VuWy6ux7ZFNJx/g44K2A=";
       };
     })
-     pkgs.vimPlugins.cellular-automaton-nvim
+    pkgs.vimPlugins.cellular-automaton-nvim
+    pkgs.vimPlugins.vim-cool
   ];
 
   extraConfigLua = ''

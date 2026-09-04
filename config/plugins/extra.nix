@@ -12,7 +12,6 @@
     })
     pkgs.vimPlugins.cellular-automaton-nvim
     pkgs.vimPlugins.vim-cool
-    pkgs.vimPlugins.vim-airline-themes
   ];
 
   extraConfigLua = ''

@@ -1,6 +1,7 @@
 {
   plugins = {
     web-devicons.enable = true;
+    fugitive.enable = true;
 
     gitsigns = {
       enable = true;
@@ -155,13 +156,72 @@
       };
     };
 
+    lualine = {
+      enable = true;
+
+      settings = {
+        options = {
+          theme = "auto";
+          icons_enabled = true;
+          component_separators = {
+            left = "❯";
+            right = "❮";
+          };
+          section_separators = {
+            left = "";
+            right = "";
+          };
+          globalstatus = true;
+        };
+
+        # Statusline component arrangement matching the image
+        sections = {
+          lualine_a = [ "mode" ]; # normal (blue powerline section)
+          lualine_b = [ "branch" ]; # branch icon + master
+          lualine_c = [
+            "diff"
+            "filename"
+          ]; # +2 ~1 -1 | lualine.lua
+          lualine_x = [
+            "encoding"
+            "fileformat"
+            "filetype"
+          ]; # utf-8 | unix icon | lua
+          lualine_y = [ "progress" ]; # Top
+          lualine_z = [ "location" ]; # 1:1 (blue powerline end section)
+        };
+
+        tabline = {
+          lualine_a = [
+            {
+              __unkeyed-1 = "buffers";
+              show_filename_only = true; # Like airline's unique_tail
+              hide_filename_extension = false;
+              show_modified_status = true;
+              mode = 2; # 0: shows buffer numbers, 1: buffer index, 2: buffer name
+
+              show_close_icon = false;
+              max_length = {
+                __raw = "function() return vim.o.columns end";
+              };
+            }
+          ];
+          lualine_z = [ "tabs" ]; # Shows tab pages on the far right if multiple exist
+        };
+      };
+    };
+
   };
 
-  colorschemes = {
-    tokyonight = {
-      enable = true;
-      settings.style = "moon";
-      settings.styles.comments.italic = false;
+  colorschemes.rose-pine = {
+    enable = true;
+    settings = {
+      variant = "main"; # "main", "moon", or "dawn"
+      dark_variant = "main";
+      styles = {
+        bold = true;
+        italic = false;
+      };
     };
   };
 

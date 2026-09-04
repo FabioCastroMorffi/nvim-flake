@@ -2,27 +2,27 @@
 {
   plugins = {
 
-    avante = {
-      enable = true;
-      settings = {
-        input.provider = "snacks";
-        selector.provider = "snacks";
-      };
-      lazyLoad.settings = {
-        cmd = [
-          "AvanteAsk"
-          "AvanteChat"
-          "AvanteToggle"
-        ];
-        keys = [
-          {
-            __unkeyed-1 = "<leader>aa";
-            __unkeyed-2.__raw = "function() require('avante.api').ask() end";
-            desc = "Avante Ask";
-          }
-        ];
-      };
-    };
+    # avante = {
+    #   enable = true;
+    #   settings = {
+    #     input.provider = "snacks";
+    #     selector.provider = "snacks";
+    #   };
+    #   lazyLoad.settings = {
+    #     cmd = [
+    #       "AvanteAsk"
+    #       "AvanteChat"
+    #       "AvanteToggle"
+    #     ];
+    #     keys = [
+    #       {
+    #         __unkeyed-1 = "<leader>aa";
+    #         __unkeyed-2.__raw = "function() require('avante.api').ask() end";
+    #         desc = "Avante Ask";
+    #       }
+    #     ];
+    #   };
+    # };
 
     mini = {
       enable = true;
@@ -36,14 +36,14 @@
           n_lines = 500;
         };
         surround = { };
-        statusline = {
-          use_icons = true;
-        };
-        tabline = {
-          show_reorder = false;
-          show_close = false;
-          tabpage_section = "left";
-        };
+        # statusline = {
+        #   use_icons = true;
+        # };
+        # tabline = {
+        #   show_reorder = false;
+        #   show_close = false;
+        #   tabpage_section = "left";
+        # };
       };
     };
 

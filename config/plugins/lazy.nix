@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
   plugins = {
 
@@ -94,7 +94,6 @@
         file-browser.enable = true;
       };
     };
-
 
     luasnip = {
       enable = true;
@@ -224,12 +223,12 @@
     })
   '';
 
-extraPackages = with pkgs; [
-  nixfmt
-  stylua
-  rustfmt
-  black
-  prettier
-  clang-tools
-];
+  extraPackages = with pkgs; [
+    nixfmt
+    stylua
+    rustfmt
+    black
+    prettier
+    clang-tools
+  ];
 }

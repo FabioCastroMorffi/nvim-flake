@@ -29,6 +29,8 @@ in
       servers = {
         rust_analyzer = {
           enable = true;
+          installCargo = false;
+          installRustc = false;
         };
         clangd = {
           enable = true;
@@ -43,6 +45,18 @@ in
         };
         pyright = {
           enable = true;
+        };
+        arduino_language_server = {
+          enable = true;
+          extraOptions.cmd = [
+            "arduino-language-server"
+            "-cli"
+            "arduino-cli"
+            "-clangd"
+            "clangd"
+            "-fqbn"
+            "arduino:avr:uno"
+          ];
         };
       };
     };
@@ -62,6 +76,7 @@ in
         query
         vim
         vimdoc
+        arduino
       ];
       settings = {
         highlight.enable = true; # explicit, though likely already the default

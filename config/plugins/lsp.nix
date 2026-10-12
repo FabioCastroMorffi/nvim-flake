@@ -53,7 +53,9 @@ in
             "-cli"
             "arduino-cli"
             "-clangd"
-            "clangd"
+            "${pkgs.llvmPackages_18.clang-tools}/bin/clangd"
+            "-cli-config"
+            "/home/fabio/.arduino15/arduino-cli.yaml"
             "-fqbn"
             "arduino:avr:uno"
           ];
@@ -154,8 +156,21 @@ in
     }
   ];
 
+  extraConfigLuaPost = ''
+    vim.lsp.config('arduino_language_server', {
+      capabilities = {
+        workspace = {
+          semanticTokens = { refreshSupport = false },
+          codeLens = { refreshSupport = false },
+        },
+      },
+    })
+  '';
+
   extraPackages = with pkgs; [
     clang-tools
     lldb
+    arduino-cli
+    arduino-language-server
   ];
 }

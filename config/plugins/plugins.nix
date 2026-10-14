@@ -128,10 +128,15 @@
           lua = [ "stylua" ];
           rust = [ "rustfmt" ];
           python = [ "black" ];
-          html = [ "prettier" ];
           markdown = [ "prettier" ];
           c = [ "clang_format" ];
           cpp = [ "clang_format" ];
+          javascript = [ "prettier" ];
+          typescript = [ "prettier" ];
+          html = [ "prettier" ];
+          css = [ "prettier" ];
+          json = [ "prettier" ];
+          "_" = [ "trim_whitespace" ];
         };
       };
     };

@@ -60,30 +60,35 @@ in
             "arduino:avr:uno"
           ];
         };
+        html.enable = true;
+        cssls.enable = true;
+        jsonls.enable = true;
+        ts_ls.enable = true;
       };
     };
 
     treesitter = {
       enable = true;
       nixGrammars = true;
-      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-        lua
-        nix
-        rust
-        c
-        cpp
-        python
-        html
-        markdown
-        query
-        vim
-        vimdoc
-        arduino
-      ];
-      settings = {
-        highlight.enable = true; # explicit, though likely already the default
-        indent.enable = true; # this replaces your manual indentexpr-setting FileType block
-      };
+      grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
+      # grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      #   lua
+      #   nix
+      #   rust
+      #   c
+      #   cpp
+      #   python
+      #   html
+      #   markdown
+      #   query
+      #   vim
+      #   vimdoc
+      #   arduino
+      #   css
+      #   javascript
+      # ];
+      highlight.enable = true;
+      indent.enable = true;
     };
 
     dap-ui.enable = true;

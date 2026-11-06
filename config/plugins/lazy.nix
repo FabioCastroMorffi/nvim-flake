@@ -36,6 +36,8 @@
           n_lines = 500;
         };
         surround = { };
+        indentscope = { };
+        move = { };
         # statusline = {
         #   use_icons = true;
         # };

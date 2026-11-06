@@ -46,4 +46,11 @@
     incsearch = true;
     hlsearch = true;
   };
+
+  highlight = {
+    MiniIndentscopeSymbol = {
+      fg = "#c0caf5";
+      bold = true;
+    };
+  };
 }

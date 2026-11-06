@@ -214,21 +214,35 @@
           lualine_z = [ "tabs" ]; # Shows tab pages on the far right if multiple exist
         };
       };
+
     };
 
-  };
-
-  colorschemes.rose-pine = {
-    enable = true;
-    settings = {
-      variant = "main"; # "main", "moon", or "dawn"
-      dark_variant = "main";
-      styles = {
-        bold = true;
-        italic = false;
+    nvim-tree = {
+      enable = true;
+      openOnSetup = false;
+      settings = {
+        # hijack_directories.enable = true;
+        view.width = 30;
       };
     };
   };
+
+  colorschemes.nightfox = {
+    enable = true;
+    flavor = "carbonfox";
+  };
+
+  # colorschemes.rose-pine = {
+  #   enable = true;
+  #   settings = {
+  #     variant = "main"; # "main", "moon", or "dawn"
+  #     dark_variant = "main";
+  #     styles = {
+  #       bold = true;
+  #       italic = false;
+  #     };
+  #   };
+  # };
 
   keymaps = [
     {
